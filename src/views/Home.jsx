@@ -13,7 +13,7 @@ export default function Home() {
       <div className='md:w-[55%] w-full h-auto flex flex-col md:pr-16 md:mt-40 mt-24'>
         <Title type='header' textPrimary='Dev' textSecondary='eloper' where='header'/>
         <span className='font-light text-tertiary md:text-3xl text-lg ml-1'>Fullstack</span>
-        <span className='font-light text-tertiary text-justify md:text-lg text-base ml-1 mt-10'>Holi, I'm Amadeo Flores, and like you, I don't sleep until I bring my real ideas to life. I believe in F power of creativity and determination to turn dreams into reality. Through my personal website, I aim to share my passion, skills, and unique perspective with the world.</span>
+        <span className='font-light text-tertiary text-justify md:text-lg text-base ml-1 mt-10'>Holi, I'm Amadeo Flores, and like you, I don't sleep until I bring my real ideas to life. I believe in power of creativity and determination to turn dreams into reality. Through my personal website, I am to share my passion, skills, and unique perspective with the world.</span>
       </div>
       <div className='md:w-[45%] w-full flex justify-center items-center h-full relative'>
         <svg ref={svg} width="444" height="498" viewBox="0 0 444 498" fill="none" xmlns="http://www.w3.org/2000/svg">

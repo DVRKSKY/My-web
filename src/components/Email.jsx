@@ -65,7 +65,7 @@ export default function Email() {
 
   return (
     <div className={`${activeEmailStore === true? 'flex fixed top-0 z-[110] justify-center items-center ' : 'hidden'} w-screen h-screen bg-tertiary/50 `}>
-      <div className='md:w-[40%] w-[90%]  h-[70%] rounded-lg bg-white flex flex-col justify-center items-center md:p-24 p-6'>
+      <div className='md:w-[40%] w-[90%]  md:h-[60%] h-[70%]  rounded-lg bg-white flex flex-col justify-center items-center md:px-20 p-6'>
         <div className='w-full text-primary justify-start ease-in duration-300' onClick={() => cerrarModal(false)}>
           <IconClose/>
         </div>

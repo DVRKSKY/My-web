@@ -64,7 +64,22 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
+img {
+  opacity: 0; /* Hace que la imagen sea inicialmente invisible */
+}
+.fade-in {
+  animation: fadeIn 2s;
+}
 
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+img.loaded {
+  opacity: 1;
+  transition: opacity 1s ease-in-out; /* Hace que la imagen sea visible */
+}
 button {
   border-radius: 8px;
   border: 1px solid transparent;
