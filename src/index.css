@@ -1,48 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@1;100;200;300;400;500;600;700;800;900;1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@1;100;200;300;400;500;600;700;800;900;1000&display=swap");
 
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 :root {
-  --sofia-sans: 'Sofia Sans', sans-serif;
+  --sofia-sans: "Sofia Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .text-stroke {
-  -webkit-text-stroke: 1px #8A8A8A;
+  -webkit-text-stroke: 1px white;
 }
 .text-stroke-mobile {
-  -webkit-text-stroke: .6px #8A8A8A;
+  -webkit-text-stroke: 0.6px white;
 }
+
+.text-stroke-light {
+  -webkit-text-stroke: 1px #cf77f5;
+}
+.text-stroke-mobile-light {
+  -webkit-text-stroke: 0.6px #cf77f5;
+}
+
 .whiteboard {
   --grid-size: 20px;
 
   /* Define el patrón de cuadrícula y el gradiente de fondo */
-  background-image: 
-      linear-gradient(148deg, rgba(166, 243, 243, 0.785) 5%, rgba(234, 234, 234, 0.603) 74%), 
-      linear-gradient(to right, rgb(227, 227, 227) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(227, 227, 227) 1px, transparent 1px);
+  background-image: linear-gradient(
+      5deg,
+      rgba(199, 191, 248, 0.785) 5%,
+      rgba(234, 234, 234, 0.603) 74%
+    ),
+    linear-gradient(to right, rgb(227, 227, 227) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(227, 227, 227) 1px, transparent 1px);
 
   /* Define el tamaño de las imágenes de fondo */
-  background-size: 
-      cover, 
-      var(--grid-size) var(--grid-size), 
-      var(--grid-size) var(--grid-size);
+  background-size: cover, var(--grid-size) var(--grid-size),
+    var(--grid-size) var(--grid-size);
 
   /* Asegúrate de que las cuadrículas y el gradiente se repiten a lo largo de todo el contenedor */
-  background-repeat: 
-      no-repeat, /* el gradiente no debe repetirse */
-      repeat, /* la cuadrícula vertical debe repetirse */
-      repeat; /* la cuadrícula horizontal debe repetirse */
+  background-repeat: no-repeat, /* el gradiente no debe repetirse */ repeat,
+    /* la cuadrícula vertical debe repetirse */ repeat; /* la cuadrícula horizontal debe repetirse */
 
   /* Define el tamaño y la posición del contenedor */
-  
 }
 
-
-
 :root {
-  font-family: var(--sofia-sans), Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: var(--sofia-sans), Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
   line-height: 1.5;
   font-weight: 400;
   background-color: white;
@@ -54,7 +60,6 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
 
 body {
   margin: 0;
@@ -72,8 +77,12 @@ img {
 }
 
 @keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 img.loaded {
@@ -87,12 +96,8 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
 }
 button:focus,
 button:focus-visible {

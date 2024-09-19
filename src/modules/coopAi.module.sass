@@ -1,58 +1,99 @@
-.cardCalculator
-    width: 350px
-    height: 290px
-    background-color: #fff
+.router
+  width: 400px
+  user-select: none
+  height: 70px
+  background: #ffffff
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  border-radius: 10px
+  ul
     display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-    padding: 25px
-    border-radius: 20px
-    margin: auto
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1)
-    .result
-        height: 80px
-        width: 100%
-        justify-content: end
-        align-items: center
-        .number
-            color: #8A8A8A
-            font-size: 50px
-            font-style: normal
-            font-weight: 700
-            line-height: normal
-    .inputsCalculator
-        width: 100%
-        height: 36px
-        margin-top: 10px
+    width: 350px
+    li
+      position: relative
+      list-style: none
+      width: 70px
+      z-index: 1
+      a
+        position: relative
         display: flex
-        flex-direction: row
-        justify-content: space-around
+        justify-content: center
         align-items: center
-        .inputCal
-            width: 48%
-            height: 100%
-            background-color: #fff
-            border: .5px solid #CDF9F9
-            border-radius: 5px
-            padding: 15px
-            &:hover, &:active, &:focus
-                outline: none
-                border: none
-                color: #58F7F7
-    .buttons
-        margin-top: 10px
-        display: flex
-        flex-direction: row
-        justify-content: space-between
-        align-items: center
-        height: 80px
+        flex-direction: column
         width: 100%
-        .button
-            width: 62px
-            height: 62px
-            color: #58F7F7
-            &:hover, &:active, &:focus
-                outline: none
-                border: none
-                color: #58F7F7
+        text-align: center
+        font-weight: 500
+        cursor: pointer
+
+        .route
+          position: absolute
+          color: #CF77F5
+          font-weight: 400
+          font-size: 0.70em
+          letter-spacing: 0.05em
+          transition: 0.5s
+          opacity: 0
+        .icon
+          position: relative
+          display: block
+          line-height: 32px
+          font-size: 1.5em
+          text-align: center
+          transition: 0.5s
+          color: #CF77F5
+      &.active
+        a
+            .icon
+                display: flex
+                justify-content: center
+                align-items: center
+                transform: translateY(-35px)
+                color: white
+                width: 100%
+            .route
+                opacity: 1
+                transform: translateY(15px)
+.router ul li:nth-child(1).active ~ .indicador
+  transform: translateX(calc(70px * 0))
+.router ul li:nth-child(2).active ~ .indicador
+  transform: translateX(calc(70px * 1))
+.router ul li:nth-child(3).active ~ .indicador
+  transform: translateX(calc(70px * 2))
+.router ul li:nth-child(4).active ~ .indicador
+  transform: translateX(calc(70px * 3))
+.router ul li:nth-child(5).active ~ .indicador
+  transform: translateX(calc(70px * 4))
+    
+  
+.indicador
+  position: absolute
+  top: -50%
+  width: 70px
+  height: 70px
+  background: #CF77F5
+  border-radius: 50%
+  border: 6px solid #E9E6F4
+  transition: 0.5s
+  &::before
+    content: ""
+    position: absolute
+    top: 50%
+    left: -22px
+    width: 20px
+    height: 20px
+    background: transparent
+    border-top-right-radius: 20px
+    box-shadow: 1px -10px 0 0 #E9E6F4
+  &::after
+    content: ""
+    position: absolute
+    top: 50%
+    right: -22px
+    width: 20px
+    height: 20px
+    background: transparent
+    border-top-left-radius: 20px
+    box-shadow: -1px -10px 0 0 #E9E6F4
+

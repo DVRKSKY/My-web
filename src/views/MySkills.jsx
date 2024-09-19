@@ -22,7 +22,7 @@ export default function MySkills() {
   return (
     <div
       id="skills"
-      className="w-screen h-auto  flex md:flex-row flex-col bg-white justify-center items-center md:px-24 px-6 mt-4"
+      className="w-screen h-auto  flex md:flex-row flex-col bg-backgroundLight justify-center items-center md:px-24 px-6 pt-4"
     >
       <div className="md:w-1/2 md:mb-1 mb-10 w-100 h-auto flex justify-center items-center relative">
         <svg
@@ -72,7 +72,7 @@ export default function MySkills() {
             type="primary"
             action={() =>
               openInNewTab(
-                "https://firebasestorage.googleapis.com/v0/b/insomnio-98e06.appspot.com/o/Amadeo-portafolio%2FENG%20-%20Amadeo%20Flores%20-%20Senior%20Frontend%20Developer%20-%202024.docx%20(2).pdf?alt=media&token=8f484827-fb19-4ac7-a09e-c125fe657ce3"
+                "https://firebasestorage.googleapis.com/v0/b/insomnio-98e06.appspot.com/o/Archivos%2FENG%20-%20Amadeo%20Flores%20-%20Senior%20Frontend%20Developer%20-%202024.docx%20(1).pdf?alt=media&token=0b6934c9-d1e8-47a8-b67f-5a423dc4109e"
               )
             }
             icon={<IconDownload />}
