@@ -21,7 +21,7 @@ export default function Proyects() {
   return (
     <div
       id="projects"
-      className="w-screen h-auto  flex flex-col bg-white justify-center items-center md:px-24 px-6 mt-4"
+      className="w-screen h-auto  flex flex-col bg-backgroundLight justify-center items-center md:px-24 px-6"
     >
       <div className="flex justify-content items-center flex-col mt-32">
         <Title

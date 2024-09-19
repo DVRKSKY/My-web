@@ -40,9 +40,7 @@ export default function CarrouselAutoplay() {
   }, [offset]);
 
   return (
-    <div className="relative w-full overflow-hidden my-20">
-      <div className="absolute top-0 left-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10"></div>
-      <div className="absolute top-0 right-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10"></div>
+    <div className="relative w-full overflow-auto py-20">
       <div
         style={{ transform: `translateX(${offset}px)` }}
         className="flex transition-transform duration-300 ease-out"

@@ -1,5 +1,4 @@
 import { Home, Whyme, Proyects, MySkills, Footer } from "./views";
-import CarrouselAutoplay from "./components/CarrouselAutoplay";
 import { Navbar, Email } from "./components";
 import React, { useEffect } from "react";
 function App() {
@@ -29,7 +28,6 @@ function App() {
       <Home />
       <Whyme />
       <MySkills />
-      <CarrouselAutoplay />
       <Proyects />
       <Footer />
       <Email />
