@@ -1,36 +1,53 @@
 import React, { useState, useEffect } from "react";
+import bootstrap from "../assets/logos/boostrap.svg";
+import css from "../assets/logos/css.svg";
+import dart from "../assets/logos/dart.svg";
+import express from "../assets/logos/express.svg";
+import figma from "../assets/logos/figma.svg";
+import git from "../assets/logos/git.svg";
+import html from "../assets/logos/html.svg";
+import javascript from "../assets/logos/javascript.svg";
+import mysql from "../assets/logos/mysql.svg";
+import node from "../assets/logos/node.svg";
+import php from "../assets/logos/php.svg";
+import python from "../assets/logos/python.svg";
+import react from "../assets/logos/react.svg";
+import redux from "../assets/logos/redux.svg";
+import sass from "../assets/logos/sass.svg";
+import pug from "../assets/logos/pug.svg";
+import tailwind from "../assets/logos/tailwind.svg";
+import typescript from "../assets/logos/typescript.svg";
+import vue from "../assets/logos/vue.svg";
 
 export default function CarrouselAutoplay() {
   const data = [
-    { text: "Optimiza tu", fixed: "productividad" },
-    { text: "Moderniza tu", fixed: "infraestructura" },
-    { text: "Innova en tus", fixed: "servicios" },
-    { text: "Automatiza ", fixed: "operaciones" },
-    { text: "Eleva tu", fixed: "marca" },
-    { text: "Securiza tu", fixed: "información" },
-    { text: "Transforma tus", fixed: "ideas" },
-    { text: "Desarrolla tu", fixed: "software" },
-    { text: "Digitaliza tu", fixed: "negocio" },
-    { text: "Integra tus", fixed: "sistemas" },
-    { text: "Maximiza tu", fixed: "rentabilidad" },
-    { text: "Analiza tus", fixed: "datos" },
-    { text: "Mejora tu", fixed: "visibilidad" },
-    { text: "Potencia tu", fixed: "e-commerce" },
-    { text: "Personaliza tu", fixed: "experiencia" },
-    { text: "Moviliza tu", fixed: "plataforma" },
-    { text: "Expande tu", fixed: "alcance" },
-    { text: "Visualiza tu", fixed: "información" },
-    { text: "Fortalece tu", fixed: "presencia" },
-    { text: "Escalabiliza tu", fixed: "solución" },
+    { name: "Bootstrap", icon: bootstrap },
+    { name: "CSS", icon: css },
+    { name: "Dart", icon: dart },
+    { name: "Express", icon: express },
+    { name: "Figma", icon: figma },
+    { name: "Git", icon: git },
+    { name: "HTML", icon: html },
+    { name: "Javascript", icon: javascript },
+    { name: "MySQL", icon: mysql },
+    { name: "Node", icon: node },
+    { name: "PHP", icon: php },
+    { name: "Python", icon: python },
+    { name: "React", icon: react },
+    { name: "Redux", icon: redux },
+    { name: "Sass", icon: sass },
+    { name: "Pug", icon: pug },
+    { name: "Tailwind", icon: tailwind },
+    { name: "Typescript", icon: typescript },
+    { name: "Vue", icon: vue },
   ];
 
   const [offset, setOffset] = useState(0);
-  const duplicatedData = [...data, ...data]; // Duplicamos los datos
-  const itemWidth = 250; // Estimación del ancho de cada item. Ajusta si es necesario.
+  const duplicatedData = [...data, ...data];
+  const itemWidth = 180;
   useEffect(() => {
     const moveBanner = setInterval(() => {
       if (offset <= -itemWidth * data.length) {
-        // Una vez que la primera mitad esté completamente fuera de la vista, reiniciamos el offset.
         setOffset(0);
       } else {
         setOffset((prev) => prev - 1);
@@ -40,17 +57,25 @@ export default function CarrouselAutoplay() {
   }, [offset]);
 
   return (
-    <div className="relative w-full overflow-auto py-20">
+    <div className="relative w-full overflow-hidden py-20">
       <div
-        style={{ transform: `translateX(${offset}px)` }}
         className="flex transition-transform duration-300 ease-out"
+        style={{ transform: `translateX(${offset}px)` }}
       >
         {duplicatedData.map((item, index) => (
-          <div key={index} className="h-auto mx-4 text-center select-none">
-            <h2 className="text-xl text-primary w-36 font-light">
-              {item.text}{" "}
-              <strong className="text-primary font-medium">{item.fixed}</strong>
-            </h2>
+          <div
+            key={index}
+            className="mx-8 text-center select-none"
+            style={{ minWidth: itemWidth }}
+          >
+            <img
+              className="w-24 h-24 mx-auto mb-4"
+              src={item.icon}
+              alt={`${item.name} Logo`}
+            />
+            <span className="text-xl text-backgroundDark font-light">
+              {item.name}
+            </span>
           </div>
         ))}
       </div>
